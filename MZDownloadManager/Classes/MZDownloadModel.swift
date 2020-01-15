@@ -29,7 +29,7 @@ public enum TaskStatus: Int {
 
 open class MZDownloadModel: NSObject {
     
-    open var fileName: String!
+    @objc open var fileName: String!
     open var fileURL: String!
     open var status: String = TaskStatus.gettingInfo.description()
     
@@ -40,9 +40,9 @@ open class MZDownloadModel: NSObject {
     
     open var speed: (speed: Float, unit: String)?
     
-    open var progress: Float = 0
+    @objc open var progress: Float = 0
     
-    open var task: URLSessionDownloadTask?
+    @objc open var task: URLSessionDownloadTask?
     
     open var startTime: Date?
     
